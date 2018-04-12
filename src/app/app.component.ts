@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lat: number = 6.714407;
+  lng: number = 79.98906;
+  locationChoosen = false;
+
+  onChooseLocation(event){
+    this.lat = event.coords.lat;
+    this.lng = event.coords.lng;
+    this.locationChoosen = true;
+  }
 }
